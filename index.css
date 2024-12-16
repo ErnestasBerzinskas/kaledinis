@@ -24,13 +24,13 @@ body {
 }
 
 .hat-top {
-    width: 0px;
-	height: 0px;
-	border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-	border-bottom: 50px solid red;
+    width: 10px;
+	height: 10px;
+	border-left: 45px solid transparent;
+	border-right: 45px solid transparent;
+	border-bottom: 55px solid red;
     position: relative;
-    top: -1;
+    bottom: -30px;
 }
 
 .hat-brim {
@@ -49,7 +49,7 @@ body {
     background-color: white;
     border-radius: 10px;
     position: absolute;
-    top: -20px;
+    top: 20px;
     left: 40px;
 }
 
@@ -107,7 +107,7 @@ body {
 }
 
 .body {
-    position: absolute;
+    position: relative;
     top: 200px;
     left: 50%;
     transform: translateX(-50%);
@@ -151,7 +151,7 @@ body {
     top: 190px;
     left: 16%;
     width: 50px;
-    height: 100px;
+    height: 120px;
     background-color: red;
     border-radius: 0px 0px 50px 50px;
 }
@@ -161,7 +161,166 @@ body {
     top: 190px;
     left: 52%;
     width: 50px;
-    height: 100px;
+    height: 120px;
     background-color: red;
     border-radius: 0px 0px 50px 50px;
+}
+
+.leftarm {
+    position: absolute;
+    top: -75px;
+    left:89%;
+    width: 50px;
+    height: 165px;
+    background-color: red;
+    border-radius: 50px 50px 50px 50px;
+    animation: wave 1.5s ease-in infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(49deg);
+    }
+    50% {
+        transform: rotate(60deg);
+    }
+    100% {
+        transform: rotate(49deg);
+    }
+}
+
+.rightarm {
+    position: absolute;
+    top: 5px;
+    left: -24%;
+    width: 50px;
+    height: 170px;
+    background-color: red;
+    border-radius: 50px 50px 50px 50px;
+    transform: rotate(0.60turn);
+}
+.snowflake {
+    position: absolute;
+    font-size: 2.5em;
+    color: white;
+    animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -10%;
+        opacity: 1;
+    }
+    50% {
+        opacity: 2;
+    }
+    100% {
+        top: 96%;
+        opacity: 0;
+    }
+}
+
+.reindeer {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url('https://www.shutterstock.com/image-vector/santa-on-sleigh-his-reindeers-260nw-2209109623.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fly 10s infinite linear;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+@keyframes fly {
+    0% {
+        top: 10%;
+        right: -0%;
+        transform: scale(1);
+    }
+    25% {
+        top: 50%;
+        right: 25%;
+        transform: scale(1.3);
+    }
+    50% {
+        top: 20%;
+        right: 50%;
+        transform: scale(1);
+    }
+    75% {
+        top: 60%;
+        right: 75%;
+        transform: scale(1.1);
+    }
+    100% {
+        top: 30%;
+        right: 101%;
+        transform: scale(1);
+    }
+}
+
+.gift-box {
+    position: absolute;
+    bottom: 3%;
+    left: -3.5%;
+    width: 200px;
+    height: 200px;
+    background-color: #ff6666;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: rotate(1.10turn);
+}
+
+.ribbon-horizontal {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #fff;
+    transform: translateY(-50%);
+}
+
+.ribbon-vertical {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 100%;
+    background-color: #fff;
+    transform: translateX(-50%);
+}
+
+.bow {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bow::before, .bow::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 10px;
+    background-color: #fff;
+}
+
+.bow::before {
+    transform: rotate(45deg);
+}
+
+.bow::after {
+    transform: rotate(-45deg);
 }
