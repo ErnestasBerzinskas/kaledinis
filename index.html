@@ -1,326 +1,42 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0;
-}
-.pavadinimas {
-    text-align: center;
-    font-size: 30px;
-}
-.santa {
-    position: relative;
-    width: 350px;
-    height: 400px;
-}
-
-.hat {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.hat-top {
-    width: 10px;
-	height: 10px;
-	border-left: 45px solid transparent;
-	border-right: 45px solid transparent;
-	border-bottom: 55px solid red;
-    position: relative;
-    bottom: -30px;
-}
-
-.hat-brim {
-    width: 120px;
-    height: 20px;
-    background-color: white;
-    border-radius: 10px;
-    position: absolute;
-    top: 90px;
-    left: -10px;
-}
-
-.top-hat {
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border-radius: 10px;
-    position: absolute;
-    top: 20px;
-    left: 40px;
-}
-
-.face {
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 100px;
-    background-color: #ffe0bd;
-    border-radius: 50%;
-    border: 5px solid white;
-}
-
-.eyes {
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.eyes::before, .eyes::after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    border-radius: 50%;
-}
-
-.beard {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 60px;
-    background-color: white;
-    border-radius: 0 0 50% 50%;
-}
-
-.mouth {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 20px;
-    background-color: red;
-    border-radius: 0 0 20px 20px;
-}
-
-.body {
-    position: relative;
-    top: 200px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 200px;
-    background-color: red;
-    border-radius: 50px 50px 50px 50px;
-}
-
-.belt {
-    position: absolute;
-    bottom: 50px;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background-color: black;
-}
-
-.button2 {
-    position: absolute;
-    bottom: 90px;
-    left: 63px;
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    border-radius: 10px;
-}
-
-.button3 {
-    position: absolute;
-    bottom: 145px;
-    left: 63px;
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    border-radius: 10px;
-}
-
-.leftleg {
-    position: absolute;
-    top: 190px;
-    left: 16%;
-    width: 50px;
-    height: 120px;
-    background-color: red;
-    border-radius: 0px 0px 50px 50px;
-}
-
-.rightleg {
-    position: absolute;
-    top: 190px;
-    left: 52%;
-    width: 50px;
-    height: 120px;
-    background-color: red;
-    border-radius: 0px 0px 50px 50px;
-}
-
-.leftarm {
-    position: absolute;
-    top: -75px;
-    left:89%;
-    width: 50px;
-    height: 165px;
-    background-color: red;
-    border-radius: 50px 50px 50px 50px;
-    animation: wave 1.5s ease-in infinite;
-}
-
-@keyframes wave {
-    0% {
-        transform: rotate(49deg);
-    }
-    50% {
-        transform: rotate(60deg);
-    }
-    100% {
-        transform: rotate(49deg);
-    }
-}
-
-.rightarm {
-    position: absolute;
-    top: 5px;
-    left: -24%;
-    width: 50px;
-    height: 170px;
-    background-color: red;
-    border-radius: 50px 50px 50px 50px;
-    transform: rotate(0.60turn);
-}
-.snowflake {
-    position: absolute;
-    font-size: 2.5em;
-    color: white;
-    animation: fall 10s linear infinite;
-}
-
-@keyframes fall {
-    0% {
-        top: -10%;
-        opacity: 1;
-    }
-    50% {
-        opacity: 2;
-    }
-    100% {
-        top: 96%;
-        opacity: 0;
-    }
-}
-
-.reindeer {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background-image: url('https://www.shutterstock.com/image-vector/santa-on-sleigh-his-reindeers-260nw-2209109623.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: fly 10s infinite linear;
-}
-
-button {
-    cursor: pointer;
-    border: none;
-}
-
-@keyframes fly {
-    0% {
-        top: 10%;
-        right: -0%;
-        transform: scale(1);
-    }
-    25% {
-        top: 50%;
-        right: 25%;
-        transform: scale(1.3);
-    }
-    50% {
-        top: 20%;
-        right: 50%;
-        transform: scale(1);
-    }
-    75% {
-        top: 60%;
-        right: 75%;
-        transform: scale(1.1);
-    }
-    100% {
-        top: 30%;
-        right: 101%;
-        transform: scale(1);
-    }
-}
-
-.gift-box {
-    position: absolute;
-    bottom: 3%;
-    left: -3.5%;
-    width: 200px;
-    height: 200px;
-    background-color: #ff6666;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transform: rotate(1.10turn);
-}
-
-.ribbon-horizontal {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background-color: #fff;
-    transform: translateY(-50%);
-}
-
-.ribbon-vertical {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 20px;
-    height: 100%;
-    background-color: #fff;
-    transform: translateX(-50%);
-}
-
-.bow {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    border-radius: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.bow::before, .bow::after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 10px;
-    background-color: #fff;
-}
-
-.bow::before {
-    transform: rotate(45deg);
-}
-
-.bow::after {
-    transform: rotate(-45deg);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="pavadinimas">
+<h1>SU ŠV. KALĖDOM!</h1>
+    </div> 
+    <div class="santa">
+        <div class="hat">
+            <div class="hat-top"></div>
+            <div class="top-hat"></div>
+            <div class="hat-brim"></div>
+        </div>
+        <div class="face">
+            <div class="eyes"></div>
+            <div class="beard"></div>
+            <div class="mouth"></div>
+        </div>
+        <div class="body">
+            <div class="belt"></div>
+            <div class="button2"></div>
+            <div class="button3"></div>
+            <div class="leftleg"></div>
+            <div class="rightleg"></div>
+            <div class="leftarm"></div>
+            <div class="rightarm"></div>
+        </div>
+    </div>
+    <a href="https://www.youtube.com/watch?v=tbbKjDjMDok&ab_channel=SuperSimpleSongs-KidsSongs"><div class="snowflake">❄️</div></a>
+    <a href="https://www.youtube.com/watch?v=fJQqOzkcHjg&ab_channel=ChristmasSongsandCarols-LovetoSing"><div class="reindeer"></div></a>
+    <a href="https://st.depositphotos.com/1098692/1485/i/450/depositphotos_14850833-stock-photo-red-gift-box.jpg"><div class="gift-box">
+        <div class="ribbon-horizontal"></div>
+        <div class="ribbon-vertical"></div>
+        <div class="bow"></div></a>
+    <script src="script.js"></script>
+</body>
+</html>
